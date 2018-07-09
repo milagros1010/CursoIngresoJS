@@ -11,7 +11,8 @@ function mostrarAumento()
 	sueldo = document.getElementById('importe').value;
  	sueldo = parseInt(sueldo);
 
- 	sueldoConDescuento = sueldo - (1-0.1)
+ 	descuento = sueldo * (25/100)
+ 	sueldoConDescuento = sueldo - descuento
  	document.getElementById('resultado').value = sueldoConDescuento;
 	
 }

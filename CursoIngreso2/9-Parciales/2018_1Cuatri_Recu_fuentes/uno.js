@@ -1,15 +1,18 @@
 
 function mostrar()
 {
-	var altura
-	var base
+	var base;
+	var	altura;
+	var	superficie;
 	var perimetro
 
-	altura = prompt(ingrese altura de rectangulo)
+	base = prompt ("ingrese base de triangulo")
+	base = parseInt (base)
+	altura = prompt ("ingrese altura de triangulo") 
 	altura = parseInt(altura)
-	base = prompt(ingrese base de  rectangulo)
-	base = parseInt(base)
 
-	perimetro = 2*altura + 2*base
+	superficie = base * altura/2
+	perimetro = 3 * base
 
+	alert("superficie"+superficie+"perimetro:"+perimetro)
 }
