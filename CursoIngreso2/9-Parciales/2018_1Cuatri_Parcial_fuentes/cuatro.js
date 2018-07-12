@@ -4,9 +4,9 @@ function mostrar()
 	var numeroDos;
 	var resultado;
 
-	numeroUno = prompt("numeroUno");
+	numeroUno = prompt("ingrese primer numero");
 	numeroUno = parseInt(numeroUno);
-	numeroDos = prompt("numeroDos");
+	numeroDos = prompt("ingrese segundo numero");
 	numeroDos = parseInt(numeroDos);
 
 	if (resultado=numeroUno==numeroDos) 
@@ -22,13 +22,7 @@ function mostrar()
 		resultado= alert(numeroUno+numeroDos)
 	}
 
-	if (resultado>10) 
-	{
-		alert(resultado+"la suma es"+resultado+"y supero el 10" )
-	}
-	else
-	{
-		alert(resultado)
-	}
+	resultado = (resultado<50)
+	alert(resultado+"la suma es"+resultado+"y es menor a 50")
 
 }
