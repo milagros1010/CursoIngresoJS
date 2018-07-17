@@ -16,7 +16,7 @@ function mostrar()
 		}
 		else 
 		{
-			alert("v")
+			alert("Vamos, la proxima se puede");
 		}
 	}
 
