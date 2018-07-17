@@ -10,27 +10,62 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var precio = $35;
+ 	var totalBruto;
  	var cantidad;
  	var marca;
- 	var descuento
+ 	var descuento;
  	var precioDescuento;
 
  	cantidad = document.getElementById('Cantidad').value;
- 	marca = document.getElementById('Marca').value
- 	if (cantidad >= 6) 
- 	{
- 		descuento = precio* (50/100)
- 		precioDescuento = precio-descuento
- 		alert (precioDescuento)
+ 	cantidad = parseInt(cantidad);
+ 	marca = document.getElementById('Marca').value;
+ 	totalBruto = cantidad * 35;
+
+ 	if (cantidad>=6)
+ 	{  
+ 		descuento = precio* (50/100);
+ 		precioDescuento = precio-descuento;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
  	}
- 	if else ()
+ 	else if (cantidad==5 && marca == "ArgentinaLuz") 
  	{
-
- 	}
-
-
-
-
-
+ 		precioDescuento = totalBruto* 0.4;
+ 		document.getElementById('precioDescuento').value=precioDescuento;	 					
+	}
+	else if (cantidad==5 && marca != "ArgentinaLuz")
+	{	
+		precioDescuento = totalBruto* 0.3;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+	}
+	else if (cantidad==4 && marca=="ArgentinaLuz"|| marca=="FelipeLamparas") 
+	{
+		precioDescuento = totalBruto* 0.25;
+ 		document.getElementById('precioDescuento').value=precioDescuento;	
+	}
+	else if (cantidad==4 && marca!="ArgentinaLuz"|| marca!="FelipeLamparas") 
+	{
+		precioDescuento = totalBruto* 0.2;
+ 		document.getElementById('precioDescuento').value=precioDescuento;	
+	}
+	else if (cantidad==3 && marca=="ArgentinaLuz") 
+	{
+		precioDescuento = totalBruto* 0.15;
+ 		document.getElementById('precioDescuento').value=precioDescuento;	
+	}
+	else if (cantidad==3 && marca== "FelipeLamparas")
+	{
+		precioDescuento = totalBruto* 0.10;
+ 		document.getElementById('precioDescuento').value=precioDescuento;	
+	}
+	else if (cantidad==3 && marca!="FelipeLamparas") 
+	{
+		precioDescuento = totalBruto* 0.5;
+ 		document.getElementById('precioDescuento').value=precioDescuento;	
+	}
+	else if (totalBruto==120) 
+	{
+		descuento = totalBruto * (10/100);
+ 		precioDescuento = totalBruto+descuento;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+	}
 }
