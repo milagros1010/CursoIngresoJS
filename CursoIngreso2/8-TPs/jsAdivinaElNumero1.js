@@ -13,7 +13,7 @@ var numero;
 function comenzar()
 {
 	numeroSecreto = Math.floor(Math.random()*(100))+1;
-	alert("toque el boton verificar"+numeroSecreto);
+	alert("toque el boton verificar");
 	
 	//Genero el número RANDOM entre 1 y 100
 	 //alert(numeroSecreto );

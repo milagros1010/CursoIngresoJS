@@ -8,13 +8,17 @@ var eleccionMaquina;
 
 function comenzar()
 {
-	
+	SeleccionM= Math.floor(Math.random()*(3))+1;
 
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+	var piedra = 1
+	if (piedra)
+	{
+		
+	}
 
 }//FIN DE LA FUNCIÓN
 function papel()

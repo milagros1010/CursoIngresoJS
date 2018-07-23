@@ -14,12 +14,14 @@ function CalcularPrecio ()
  	var cantidad;
  	var marca;
  	var precioDescuento;
+ 	var precio=35
  	var iibb
+ 	var precioFinal
 
  	cantidad = document.getElementById('Cantidad').value;
  	cantidad = parseInt(cantidad);
  	marca = document.getElementById('Marca').value;
- 	totalBruto = cantidad * 35;
+ 	totalBruto = cantidad * precio;
 
  	if (cantidad>=6)
  	{  
@@ -76,9 +78,12 @@ function CalcularPrecio ()
  		}		
  				
  	}
-if (precioDescuento>120) 
+
+ 	precioFinal = totalBruto - descuento;
+	if (totalBruto>120) 
 {
-	precioDescuento = totalBruto*0.10;
+	totalBruto = precioFinal * 0.1;
+	precioFinal = precioFinal* totalBruto
 	document.getElementById('precioDescuento').value=precioDescuento;
 	iibb = precioDescuento + totalBruto;
 	alert("IIBB Usted pago"+iibb);
