@@ -7,9 +7,13 @@ y una de las cuatro operaciones básicas (suma, resta,
 se debe informar si el resultado es el correcto o no.
 */
 var respuesta;
+var largo;
+var ancho;
+var radio;
 function comenzar()
 {
-
+	document.getElementById('PrimerNumero').value
+	document.getElementById('')
 	
 
 }//FIN DE LA FUNCIÓN
