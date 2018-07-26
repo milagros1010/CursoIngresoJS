@@ -9,7 +9,7 @@ function mostrar()
 	numeroDos = prompt("ingrese segundo numero");
 	numeroDos = parseInt(numeroDos);
 
-	if (resultado=numeroUno==numeroDos) 
+	if (numeroUno==numeroDos) 
 	{
 		resultado = alert(numeroUno+""+numeroDos)
 	}
@@ -20,9 +20,12 @@ function mostrar()
 	else
 	{
 		resultado= alert(numeroUno+numeroDos)
+
 	}
 
-	resultado = (resultado<50)
-	alert(resultado+"la suma es"+resultado+"y es menor a 50")
+if (resultado>10)
+{
+	alert(resultado+"la suma es"+resultado+"y superoel 10")
+}
 
 }
