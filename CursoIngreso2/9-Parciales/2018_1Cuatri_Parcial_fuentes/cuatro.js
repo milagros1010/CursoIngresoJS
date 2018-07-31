@@ -10,22 +10,18 @@ function mostrar()
 	numeroDos = parseInt(numeroDos);
 
 	if (numeroUno==numeroDos) 
-	{
-		resultado = alert(numeroUno+""+numeroDos)
+	{ 
+		alert(numeroUno+""+numeroDos);
 	}
 	else if (numeroUno>numeroDos) 
 	{
-		resultado = alert(numeroUno - numeroDos)
+		resultado = numeroUno- numeroDos;
+		alert (resultado);
 	}
-	else
+	else(resultado>10)
 	{
-		resultado= alert(numeroUno+numeroDos)
-
+		resultado= numeroUno+numeroDos;
+		alert(resultado);
+		alert("la suma es:"+" "+resultado+" "+"y supero el 10");
 	}
-
-if (resultado>10)
-{
-	alert(resultado+"la suma es"+resultado+"y superoel 10")
-}
-
 }
