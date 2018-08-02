@@ -7,10 +7,13 @@ function mostrar()
 	var nombre;
 	var sexo;
 	var edad;
+	var edadMaxima;
+	var edadMinima;
+	var edadMaximaFem;
 	var contador;
 	var cantidad;
 	contador = 0;
-	
+
 	while(contador<4)
 	{	
 		contador++;	
@@ -23,19 +26,45 @@ function mostrar()
 		}
 		edad = prompt("ingrese edad");
 		edad = parseInt(edad);
+
 		while(isNan(edad)||edad<0||edad>100)
 		{
 			edad = prompt("ingrese edad");
 			edad = parseInt(edad);
 
 		}
-		if (edad>) 
+		if (edad==81) 
 		{	
+			nombreMayor=nombre;
+			
 
+		}
+		if (contador==0) 
+		{
+			edadMaxima=edad;
+			edadMinima=edad;
+			nombreMayor=nombre;
 		}
 		else
 		{
+			if (edadMaxima<edad) 
+			{
+				edadMaxima=edad;
+				nombreMayor=nombre;
+			}
+			if (edadMinima>edad) 
+			{
+				edadMaxima=edad;
+			}
+			if (sexo =='f') 
+			{
+				if (edad>edadMaximaFem) 
+				{
+					edadMaximaFem=edad;
+					nombreFemeninoMasViejo=nombre;
+				}
 
+			}
 		}	
 	}
 document.write()
@@ -43,3 +72,4 @@ document.write()
 document.write()
 
 }
+
