@@ -1,16 +1,16 @@
 
 function mostrar()
 {
-	var altura;
-	var base;
+	var largo;
+	var ancho;
 	var perimetro;
 
-	altura = prompt("ingrese altura de rectangulo");
-	altura = parseInt(altura);
-	base = prompt("ingrese base de rectangulo");
-	base = parseInt(base);
+	largo = prompt("ingrese largo del rectangulo");
+	largo = parseInt(largo);
+	ancho = prompt("ingrese ancho del rectangulo");
+	ancho = parseInt(ancho);
 
-	perimetro = 2*altura + 2*base;
+	perimetro = 2*largo + 2*ancho;
 
 	alert("perimetro:"+perimetro);
 }
