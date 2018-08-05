@@ -72,7 +72,7 @@ document.write()
 document.write()
 document.write()
 
-*/
+
 function mostrar()
 {
 
@@ -97,8 +97,6 @@ while(contador<5)
 
 
 {
-
-
 
 nota = prompt("ingrese nota");
 nota = parseInt(nota);
@@ -170,5 +168,84 @@ document.write("la nota mas alta es "+notamasalta+"<br>");
 
 }
 
+*/
+function mostrar()
+{
+
+var nota;
+var sexo;
+var contador;
+var promedioDeNotas;
+var sumaDeNotas;	
+var notaMasBaja;
+var notaMasAlta;
+var cantidadDeVarones6;
+
+contador= 0;
+promedioDeNotas=0;
+sumaDeNotas=0;
+cantidadDeVarones6=0;
 
 
+
+while(contador<5)
+
+{
+	nota = prompt("ingrese nota");
+	nota = parseInt(nota);
+	sexo = prompt("ingrese sexo");
+
+	contador=contador+1;
+	sumaDeNotas = sumaDeNotas + nota;
+
+while(isNaN(nota)||nota<0 || nota>10)
+{
+
+	nota = prompt("Error!!!. Reingrese nota");
+	nota = parseInt(nota);
+	
+}	
+
+while(sexo!="m" && sexo !="f" )
+{
+
+sexo = prompt("Error!! Ingrese f o m");
+
+}
+if (contador==1) 
+{
+	notaMasBaja = nota;
+	notaMasAlta = nota; 
+}
+else{
+		if (nota<notaMasBaja) 
+		{
+			notaMasBaja = nota;
+			sexoDelMasBajo = sexo;
+
+
+		}
+		else if (nota>notaMasAlta) 
+		{
+			notaMasAlta = nota;
+						
+		}
+		if (nota>=6 || sexo=="m" ) 
+		{
+			cantidadDeVarones6=cantidadDeVarones6+1;
+		}
+	}	
+
+
+
+}																																							
+
+promedioDeNotas = sumaDeNotas/nota;
+alert("el promedio es: "+promedioDeNotas);
+alert("la nota mas alta es: "+notaMasAlta);
+alert("cantidad de varones con notas igual o menor de 6: "+cantidadDeVarones6);
+
+
+}
+
+ 
