@@ -301,8 +301,8 @@ while(contador<2)
 
 promedioDeNotas = sumaDeNotas/nota;
 alert("el promedio es: "+promedioDeNotas);
-alert("El nombre de la nota mas bajo es: "+nombrePeorNota+ "la nota es: "+notaMasBaja+" y el sexo es: "+sexoDelMasBajo);
-alert("El nombre de la nota mas alta es: "+nombreMejorNota+"la nota mas alta es: "+notaMasAlta+" el sexo de la nota mas alta es: "+sexoDelMasAlto);
+alert("El nombre de la nota mas bajo es: "+nombrePeorNota+ "la nota es: "+notaMasBaja+" y el sexo es: "+sexoDePeorNota);
+alert("El nombre de la nota mas alta es: "+nombreMejorNota+"la nota mas alta es: "+notaMasAlta+" el sexo de la nota mas alta es: "+sexoDeMejorNota);
 alert("cantidad de varones con notas mayor de 6: "+cantidadDeVarones6);
 alert("el nombre de la persona mas vieja es: "+nombrePersonaMasVieja+" y tiene "+personaMasVieja);
 
@@ -321,14 +321,6 @@ alert("el nombre de la persona mas vieja es: "+nombrePersonaMasVieja+" y tiene "
 
 
 
-
-
-
-
-
-
-
-notaMasAlta = nota;
 
 
 
