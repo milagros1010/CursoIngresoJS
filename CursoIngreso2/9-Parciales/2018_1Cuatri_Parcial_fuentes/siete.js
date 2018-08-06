@@ -180,61 +180,120 @@ var sumaDeNotas;
 var notaMasBaja;
 var notaMasAlta;
 var cantidadDeVarones6;
+var edad;
+var nombre;
+var sexoDePeorNota;
+var sexoDeMejorNota;
+var nombrePeorNota;
+var nombreMejorNota;
+var personaMasVieja;
+var personaMasJoven;
+var nombrePersonaMasVieja;
+var nombrePersonaMasJoven;
+
 
 contador= 0;
 promedioDeNotas=0;
 sumaDeNotas=0;
 cantidadDeVarones6=0;
+notaMasBaja=0;
+notaMasAlta=0;
 
 
 
-while(contador<5)
+while(contador<2)
 
 {
-	nota = prompt("ingrese nota");
-	nota = parseInt(nota);
-	sexo = prompt("ingrese sexo");
 
 	contador=contador+1;
+	nombre= prompt("ingrese nombre");
+	edad = prompt("ingrese edad");
+	edad = parseInt(edad);	
+
+
+	while(isNaN(edad)||edad<=1 ||edad>100)
+	{
+		edad = prompt("ingrese edad");
+		edad = parseInt(edad);
+	}	
+
+	
+
+	nota = prompt("ingrese nota");
+	nota = parseInt(nota);
+
+	while(isNaN(nota)||nota<0 || nota>10)
+	{
+
+		nota = prompt("Error!!!. Reingrese nota");
+		nota = parseInt(nota);
+	
+	}
+
+
+	sexo = prompt("Ingrese sexo");
+
+	while(sexo!="m" && sexo !="f" )
+	{
+
+	sexo = prompt("Error!! Ingrese f o m");
+
+	}
+
 	sumaDeNotas = sumaDeNotas + nota;
 
-while(isNaN(nota)||nota<0 || nota>10)
-{
-
-	nota = prompt("Error!!!. Reingrese nota");
-	nota = parseInt(nota);
-	
-}	
-
-while(sexo!="m" && sexo !="f" )
-{
-
-sexo = prompt("Error!! Ingrese f o m");
-
-}
-if (contador==1) 
-{
-	notaMasBaja = nota;
-	notaMasAlta = nota; 
-}
-else{
-		if (nota<notaMasBaja) 
-		{
-			notaMasBaja = nota;
-			sexoDelMasBajo = sexo;
-
-
-		}
-		else if (nota>notaMasAlta) 
-		{
-			notaMasAlta = nota;
-						
-		}
-		if (nota>=6 || sexo=="m" ) 
-		{
-			cantidadDeVarones6=cantidadDeVarones6+1;
-		}
+	if (contador==1) 
+	{
+		notaMasBaja = nota;
+		notaMasAlta = nota;
+		sexoDePeorNota = sexo;
+		sexoDeMejorNota = sexo;
+		nombrePeorNota = nombre;
+		personaMasJoven = edad;
+		personaMasVieja = edad;
+		nombrePersonaMasVieja = nombre;
+		nombrePersonaMasJoven = nombre;
+		nombreMejorNota = nombre;
 	}	
+	else
+		{
+		
+				if (nota<notaMasBaja) 
+				{
+			
+					notaMasBaja = nota;
+					sexoDePeorNota = sexo;
+					nombrePeorNota = nombre;
+
+				}
+
+				else  (nota>notaMasAlta) 
+				{
+					notaMasAlta = nota;				
+					sexoDeMejorNota = sexo;
+					nombreMejorNota = nombre;
+				}
+
+
+				if (edad>personaMasVieja)
+				{
+					personaMasVieja = edad;
+					nombrePersonaMasVieja = nombre;
+
+				}
+				else(edad<personaMasJoven)
+				{
+					personaMasJoven = edad;
+					nombrePersonaMasJoven = nombre;
+				}	
+
+				if(nota>=6 && sexo=="m" ) 
+				{
+
+					cantidadDeVarones6=cantidadDeVarones6+1;
+				
+				}
+		}	
 
 
 
@@ -242,10 +301,36 @@ else{
 
 promedioDeNotas = sumaDeNotas/nota;
 alert("el promedio es: "+promedioDeNotas);
-alert("la nota mas alta es: "+notaMasAlta);
-alert("cantidad de varones con notas igual o menor de 6: "+cantidadDeVarones6);
-
+alert("El nombre de la nota mas bajo es: "+nombrePeorNota+ "la nota es: "+notaMasBaja+" y el sexo es: "+sexoDelMasBajo);
+alert("El nombre de la nota mas alta es: "+nombreMejorNota+"la nota mas alta es: "+notaMasAlta+" el sexo de la nota mas alta es: "+sexoDelMasAlto);
+alert("cantidad de varones con notas mayor de 6: "+cantidadDeVarones6);
+alert("el nombre de la persona mas vieja es: "+nombrePersonaMasVieja+" y tiene "+personaMasVieja);
 
 }
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+notaMasAlta = nota;
+
+
+
+
+
